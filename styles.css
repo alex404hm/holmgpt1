@@ -67,4 +67,38 @@ header p {
     padding: 20px;
     border-radius: 12px;
     transition: all 0.3s ease-in-out;
-    box-shadow
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.feature-box a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.feature-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #00ffc5;
+}
+
+.feature-box p {
+    font-size: 1rem;
+    color: #d1d1d1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+}
