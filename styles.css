@@ -5,9 +5,20 @@
     box-sizing: border-box;
 }
 
-/* Background image */
+/* Font and Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b1b1b;
+}
+
 .background-image {
-    background-image: url('https://source.unsplash.com/1600x900/?abstract,technology'); /* Replace this with the URL of your choice */
+    background-image: url('https://source.unsplash.com/1600x900/?abstract,technology'); /* Replace URL */
     position: fixed;
     top: 0;
     left: 0;
@@ -16,93 +27,44 @@
     background-size: cover;
     background-position: center;
     z-index: -1;
-    filter: brightness(0.5); /* Darken the background for better contrast */
+    filter: brightness(0.5);
 }
 
-/* Body styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-/* Content wrapper */
+/* Content Wrapper */
 .content-wrapper {
     max-width: 1200px;
     width: 100%;
     padding: 30px;
-    background-color: rgba(0, 0, 0, 0.6); /* Adds transparency effect */
-    border-radius: 15px;
-}
-
-/* Header styles */
-header {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
     text-align: center;
-    margin-bottom: 40px;
 }
 
+/* Header Section */
 header h1 {
     font-size: 2.8rem;
-    color: #ffda79;
+    margin-bottom: 10px;
+    color: #ffc107;
 }
 
 header p {
-    font-size: 1.4rem;
-    color: #d1d1d1;
-    margin-top: 10px;
+    font-size: 1.3rem;
+    color: #dcdcdc;
+    margin-bottom: 40px;
 }
 
-/* Features section styles */
+/* Features Section */
 .features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
+/* Feature Box */
 .feature-box {
-    background-color: rgba(255, 255, 255, 0.1); /* Slight transparency */
-    padding: 30px;
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
-}
-
-.feature-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.feature-box a {
-    text-decoration: none;
-    color: #00ffc5;
-}
-
-.feature-box h2 {
-    margin-bottom: 15px;
-    font-size: 1.8rem;
-    color: #00ffc5;
-}
-
-.feature-box p {
-    color: #d1d1d1;
-    font-size: 1rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header p {
-        font-size: 1.2rem;
-    }
-
-    .feature-box h2 {
-        font-size: 1.5rem;
-    }
-}
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    box-shadow
