@@ -9,122 +9,87 @@
 body {
     font-family: 'Poppins', sans-serif;
     color: #fff;
+    background-color: #141414;
     line-height: 1.6;
-    background: linear-gradient(180deg, #1e1e1e 0%, #141414 100%);
-    min-height: 100vh;
-    position: relative;
     overflow-x: hidden;
 }
 
-/* Gradient Waves for Background */
-.background-waves {
+.background-image {
+    background: linear-gradient(120deg, #2b5876, #4e4376); /* Gradient Background */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://haikei.app/randomwaves.svg') no-repeat center;
-    background-size: cover;
     z-index: -1;
-    animation: moveWaves 20s ease-in-out infinite;
-    opacity: 0.8;
 }
 
-@keyframes moveWaves {
-    0% { background-position: 0 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0 50%; }
+/* Add wave background effect */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://www.transparenttextures.com/patterns/diagmonds-light.png');
+    opacity: 0.2;
 }
 
 /* Content Wrapper */
 .content-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
-    z-index: 1;
+    padding: 40px 20px;
 }
 
 /* Hero Section */
 .hero-section {
     text-align: center;
-    padding: 60px 20px;
-    animation: fadeIn 1.5s ease-in;
-}
-
-.hero-section header h1 {
-    font-size: 3.5rem;
-    color: #fbc531;
-    margin-bottom: 20px;
+    padding: 80px 20px;
     animation: fadeInUp 1s ease-in-out;
 }
 
+.hero-section header h1 {
+    font-size: 3rem;
+    color: #ffda79;
+    margin-bottom: 20px;
+}
+
 .hero-section header p {
-    font-size: 1.6rem;
-    color: #dcdcdc;
-    animation: fadeInUp 1.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes fadeInUp {
-    0% { transform: translateY(30px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+    font-size: 1.5rem;
+    color: #e0e0e0;
 }
 
 /* Section Titles */
 section h2 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
+    font-size: 2.4rem;
+    margin-bottom: 30px;
     color: #00ffc5;
     text-align: center;
-    animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Features Grid */
 .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-bottom: 40px;
+    gap: 30px;
+    margin-bottom: 60px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Feature Box */
 .feature-box {
     background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 12px;
-    transition: all 0.3s ease-in-out;
+    padding: 25px;
+    border-radius: 15px;
+    transition: all 0.4s ease-in-out;
     text-align: center;
-    animation: fadeInUp 2s ease-in-out;
-    opacity: 0;
-    animation-fill-mode: forwards;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
-}
-
-.feature-box:nth-child(odd) {
-    animation-delay: 0.5s;
-}
-
-.feature-box:nth-child(even) {
-    animation-delay: 0.7s;
+    overflow: hidden;
 }
 
 .feature-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.feature-box a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
-.feature-box h3 {
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-    color:
+    transform: translateY(-
