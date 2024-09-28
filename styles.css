@@ -15,8 +15,9 @@ body {
     min-height: 100vh;
 }
 
+/* Background Image */
 .background-image {
-    background-image: url('background.png'); /* Use the uploaded image */
+    background-image: url('/mnt/data/7680-4320-gradient-blur-4k-wallapapers-v0-6u0dhbv51tbb1.png'); /* Use the uploaded image */
     position: fixed;
     top: 0;
     left: 0;
@@ -111,3 +112,75 @@ section h2 {
     border-radius: 15px;
     text-align: center;
     margin-top: 50px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.footer h2 {
+    font-size: 1.8rem;
+    color: #ffda79;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    font-size: 1.2rem;
+    color: #dcdcdc;
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    list-style-type: none;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.footer ul li a {
+    color: #00ffc5;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section header h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section header p {
+        font-size: 1.3rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .feature-box h3 {
+        font-size: 1.5rem;
+    }
+}
