@@ -1,0 +1,132 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at 50% 50%, #2C2C54, #12122B);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Waitlist Section */
+.waitlist-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #F0EFFF;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #FFC107;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #E3E3F3;
+}
+
+/* Form Styles */
+.waitlist-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.waitlist-form input {
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    border: none;
+    margin-right: 10px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    backdrop-filter: blur(5px);
+}
+
+.waitlist-form input::placeholder {
+    color: #E3E3F3;
+}
+
+.btn-notify {
+    padding: 15px 25px;
+    background: linear-gradient(145deg, #6A00F4, #9F3CED);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-notify:hover {
+    background: linear-gradient(145deg, #9F3CED, #D07AFF);
+}
+
+/* Social Proof */
+.social-proof {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-proof img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #6A00F4;
+}
+
+.social-proof p {
+    margin-left: 10px;
+    color: #B0B0FF;
+    font-size: 1.1rem;
+}
+
+.social-proof strong {
+    color: #FFC107;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        padding: 30px 20px;
+    }
+
+    .waitlist-form input {
+        width: 250px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
