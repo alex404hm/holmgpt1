@@ -7,48 +7,80 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at 50% 50%, #2C2C54, #12122B);
+    background: #111;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow-x: hidden;
 }
 
-/* Waitlist Section */
+/* Full-width Waitlist Section */
 .waitlist-section {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(135deg, #1E1E40, #050510);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
+    overflow: hidden;
 }
 
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('path/to/background-image.jpg') no-repeat center center/cover;
+    z-index: 1;
+}
+
+.overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+/* Content Box */
 .content {
+    position: relative;
+    z-index: 3;
     text-align: center;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     padding: 50px 40px;
     border-radius: 20px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(15px);
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
-    color: #F0EFFF;
+    color: #fff;
+    animation: fadeIn 1.2s ease;
 }
 
 h2 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #FFC107;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #FFAB40;
+    animation: fadeIn 1.2s ease;
 }
 
 p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 30px;
     color: #E3E3F3;
+    animation: fadeIn 1.5s ease;
 }
 
 /* Form Styles */
@@ -56,6 +88,7 @@ p {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    animation: fadeInUp 1.5s ease;
 }
 
 .waitlist-form input {
@@ -65,14 +98,19 @@ p {
     border: none;
     margin-right: 10px;
     width: 300px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.3);
     color: white;
     outline: none;
     backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
 }
 
 .waitlist-form input::placeholder {
-    color: #E3E3F3;
+    color: #D3D3F3;
+}
+
+.waitlist-form input:hover, .waitlist-form input:focus {
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .btn-notify {
@@ -88,6 +126,7 @@ p {
 
 .btn-notify:hover {
     background: linear-gradient(145deg, #9F3CED, #D07AFF);
+    transform: scale(1.05);
 }
 
 /* Social Proof */
@@ -96,11 +135,12 @@ p {
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+    animation: fadeInUp 1.8s ease;
 }
 
 .social-proof img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin-right: 10px;
     border: 2px solid #6A00F4;
@@ -108,12 +148,29 @@ p {
 
 .social-proof p {
     margin-left: 10px;
-    color: #B0B0FF;
+    color: #E3E3F3;
     font-size: 1.1rem;
 }
 
 .social-proof strong {
     color: #FFC107;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive Design */
@@ -122,11 +179,20 @@ p {
         padding: 30px 20px;
     }
 
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
     .waitlist-form input {
         width: 250px;
     }
 
-    h1 {
-        font-size: 2rem;
+    .social-proof img {
+        width: 40px;
+        height: 40px;
     }
 }
