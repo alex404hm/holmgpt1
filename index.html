@@ -1,91 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AI and Tools Hub</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>HolmGPT - AI Tools</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
 </head>
-<body>
 
-    <div class="background-image"></div>
+<body class="bg-gray-800">
 
-    <main class="content-wrapper">
-
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <header>
-                <h1>AI and Tools Hub</h1>
-                <p>Explore a range of AI-powered tools to help you work smarter, create better, and find new ways to automate tasks.</p>
-            </header>
-        </section>
-
-        <!-- AI Model Selection -->
-        <section class="ai-model-selection">
-            <h2>Explore Our AI Models</h2>
-            <div class="features">
-                <article class="feature-box">
-                    <a href="https://holmhost.org/chat.html">
-                        <h3>TaskMaster - Personalized AI</h3>
-                        <p>Your personal assistant AI to manage your tasks efficiently.</p>
-                    </a>
-                </article>
-                <article class="feature-box">
-                    <a href="#">
-                        <h3>Netflix AI - Movie Finder</h3>
-                        <p>Find your perfect movie with personalized recommendations.</p>
-                    </a>
-                </article>
-                <article class="feature-box">
-                    <a href="#">
-                        <h3>ChatBot - HolmGPT</h3>
-                        <p>Talk with HolmGPT, a smart chatbot tailored for your needs.</p>
-                    </a>
-                </article>
+    <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
+        <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+            <a href="#" class="flex items-center">
+                <img src="https://www.svgrepo.com/show/499962/music.svg" class="h-6 mr-3 sm:h-9" alt="Landwind Logo">
+                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Landwind</span>
+            </a>
+            <div class="flex items-center lg:order-2">
+                <div class="hidden mt-2 mr-4 sm:inline-block">
+                    <span></span>
+                </div>
+    
+                <a href="https://themesberg.com/product/tailwind-css/landing-page"
+                    class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800">Download</a>
+                <button data-collapse-toggle="mobile-menu-2" type="button"
+                    class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="mobile-menu-2" aria-expanded="true">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
             </div>
-        </section>
-
-        <!-- Tools for Users -->
-        <section class="tools-for-users">
-            <h2>Useful Tools</h2>
-            <div class="features">
-                <article class="feature-box">
-                    <a href="#">
-                        <h3>Sound Typing</h3>
-                        <p>Type faster and more accurately with sound-enhanced feedback.</p>
-                    </a>
-                </article>
-                <article class="feature-box">
-                    <a href="#">
-                        <h3>ToS Reader</h3>
-                        <p>Scan and analyze terms of service documents with ease.</p>
-                    </a>
-                </article>
-                <article class="feature-box">
-                    <a href="#">
-                        <h3>Learning App</h3>
-                        <p>Improve your skills with our interactive learning tools.</p>
-                    </a>
-                </article>
+            <div class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+                <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                    <li>
+                        <a href="/"
+                            class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="/about"
+                            class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Company</a>
+                    </li>
+                    <li>
+                        <a href="/services"
+                            class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Service</a>
+                    </li>
+                    <li>
+                        <a href="/contact"
+                            class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                    </li>
+                </ul>
             </div>
-        </section>
+        </div>
+    </nav>
+    
+    <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+    <!-- Hero Section -->
+    <div class="flex h-screen justify-center items-center dark:bg-slate-800">
+        <div class="mx-auto mt-10 flex justify-center px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-slate-200 sm:text-5xl md:text-6xl">
+                    <span class="block xl:inline"><span class="mb-1 block">Create amazing</span>
+                    <span class="bg-gradient-to-r from-indigo-400 to-pink-600 bg-clip-text text-transparent">
+                        podcast show notes
+                    </span>
+                    </span>
+                    <div class="mt-2">10X faster
+                        <span class="relative mt-3 whitespace-nowrap text-blue-600">
+                            <svg aria-hidden="true" viewBox="0 0 418 42" class="absolute top-3/4 left-0 right-0 m-auto h-[0.58em] w-fit fill-pink-400/50" preserveAspectRatio="none">
+                                <path d="M203.371.916c-26.013-2.078-76.686 1.963-124.73 9.946L67.3 12.749C35.421 18.062 18.2 21.766 6.004 25.934 1.244 27.561.828 27.778.874 28.61c.07 1.214.828 1.121 9.595-1.176 9.072-2.377 17.15-3.92 39.246-7.496C123.565 7.986 157.869 4.492 195.942 5.046c7.461.108 19.25 1.696 19.17 2.582-.107 1.183-7.874 4.31-25.75 10.366-21.992 7.45-35.43 12.534-36.701 13.884-2.173 2.308-.202 4.407 4.442 4.734 2.654.187 3.263.157 15.593-.78 35.401-2.686 57.944-3.488 88.365-3.143 46.327.526 75.721 2.23 130.788 7.584 19.787 1.924 20.814 1.98 24.557 1.332l.066-.011c1.201-.203 1.53-1.825.399-2.335-2.911-1.31-4.893-1.604-22.048-3.261-57.509-5.556-87.871-7.36-132.059-7.842-23.239-.254-33.617-.116-50.627.674-11.629.54-42.371 2.494-46.696 2.967-2.359.259 8.133-3.625 26.504-9.81 23.239-7.825 27.934-10.149 28.304-14.005.417-4.348-3.529-6-16.878-7.066Z"></path>
+                            </svg>
+                            <span class="relative">with AI tools.</span>
+                        </span>
+                    </div>
+                </h1>
+                <p class="mx-auto mt-3 max-w-xl text-lg text-gray-500 dark:text-slate-400 sm:mt-5 md:mt-5">
+                    Example is the AI Content Generator that helps you and your team break through creative blocks to create amazing, original content 10X faster.
+                </p>
+                <div class="mt-5 sm:mt-8 sm:flex sm:justify-center">
+                    <div class="rounded-md shadow">
+                        <a class="flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 px-8 py-3 text-base font-medium text-white hover:bg-blue-700 md:py-4 md:px-10 md:text-lg" href="#">Get started for free 🚀
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <h2>Other Information</h2>
-            <p>Contact us, check our terms, or learn more about the platform.</p>
-            <ul>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-            </ul>
-        </footer>
+    <div class="bg-gray-900 py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl lg:max-w-none">
+            <div class="text-center space-y-4">
+              <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Trusted by creators worldwide</h2>
+              <p class="text-lg leading-8 text-gray-300">We can help you grow your audience and your business, no matter the
+                size.
+              </p>
+            </div>
+            <dl class="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
+              <div class="flex flex-col bg-white/5 p-8">
+                <dt class="text-sm font-semibold leading-6 text-gray-300">words written in 2023</dt>
+                <dd class="order-first text-3xl font-semibold tracking-tight text-white">12 million</dd>
+              </div>
+              <div class="flex flex-col bg-white/5 p-8">
+                <dt class="text-sm font-semibold leading-6 text-gray-300">episodes uploaded</dt>
+                <dd class="order-first text-3xl font-semibold tracking-tight text-white">10k</dd>
+              </div>
+              <div class="flex flex-col bg-white/5 p-8">
+                <dt class="text-sm font-semibold leading-6 text-gray-300">hours of media</dt>
+                <dd class="order-first text-3xl font-semibold tracking-tight text-white">6.6k</dd>
+              </div>
+              <div class="flex flex-col bg-white/5 p-8">
+                <dt class="text-sm font-semibold leading-6 text-gray-300">answers</dt>
+                <dd class="order-first text-3xl font-semibold tracking-tight text-white">2.1k</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+      
+    <!-- New Section -->
+    <div class="">
+        <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+            <div class="relative isolate overflow-hidden bg-gray-900 px-6 py-24 text-center shadow-2xl sm:rounded-3xl sm:px-16">
+                <h2 class="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">Unlock the Power of AI</h2>
+                <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Sign up now to leverage the capabilities of our AI platform. AIHub is currently in beta testing; don't hesitate to contact us for any inquiries.</p>
+                <div class="mt-10 flex items-center justify-center gap-x-6">
+                    <a href="#"
+                        class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get
+                        started
+                    </a>
+                    <a href="mailto:hello@aihub.com"
+                        class="text-sm font-semibold leading-6 text-white hover:underline hover:underline-offset-2">
+                        hello@aihub.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social_icon">
+          <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <p>@2021 Online Tutorials | All Rights Reserved</p>
+      </footer>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
+
 </html>
